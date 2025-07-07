@@ -5,7 +5,7 @@ import json
 import os
 import streamlit as st
 from remplir_word import remplacer_champs_dans_doc
-from convert_word_pdf import convert_word_to_pdf
+
 
 DB_FILE = "chantiers.json"
 MODELE_FICHE = "suivi_test_2.docx"
@@ -81,10 +81,5 @@ def generer_fiche_test(nom_chantier,donnees):
     # Enregistrer le nouveau fichier Word
     nom_sortie = os.path.abspath(f"Fiche_TEST_{nom_chantier.replace(' ', '_')}.docx")
     doc.save(nom_sortie)
-    del doc  # détruire la référence pour libérer le fichier
-    nom_pdf = nom_sortie.replace('.docx', '.pdf')
-    convert_word_to_pdf(nom_sortie, nom_pdf)
+    return nom_sortie, 
 
-    return nom_sortie, nom_pdf
-
-#il faut faire le pdf
