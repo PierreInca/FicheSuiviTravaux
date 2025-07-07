@@ -3,6 +3,8 @@ import streamlit as st
 # Éléments à contrôler pour le betonnage
 elements_betonnage = ["Contrôle bon de livraison", "Matériel de mise en oeuvre", "Enrobage"]
 
+st.write("--- Début controle_beton.py ---")
+
 def afficher_fenetre_betonnage():
     with st.expander("🪵 Contrôle : Bétonnage"):
 
