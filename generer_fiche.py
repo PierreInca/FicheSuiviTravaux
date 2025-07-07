@@ -6,6 +6,7 @@ import os
 import streamlit as st
 from remplir_word import remplacer_champs_dans_doc
 
+st.write("--- Début de generer_fiche.py ---")
 
 DB_FILE = "chantiers.json"
 MODELE_FICHE = "suivi_test_2.docx"
