@@ -4,6 +4,8 @@ from chantier_existant import utiliser_chantier_existant
 from arreter_app import bouton_arret
 from controleur import choix_controleur
 
+st.write("--- Début de main.py ---")
+
 st.set_page_config(page_title="Fiche Suivi Travaux", layout="centered")
 st.title("Fiche Suivi Travaux")
 
