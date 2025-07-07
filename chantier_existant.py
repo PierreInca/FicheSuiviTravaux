@@ -11,6 +11,7 @@ import streamlit as st
 import json
 import os
 
+st.write("--- Début de chantier_existant.py ---")
 
 DB_FILE = "chantiers.json"
 
