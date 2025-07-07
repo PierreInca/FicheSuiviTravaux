@@ -2,6 +2,8 @@ from docx import Document
 from docx.shared import RGBColor, Pt
 from docx.oxml.ns import qn
 
+st.write("--- Début de rempl word.py ---")
+
 def appliquer_style(run, taille=8, gras=False, couleur=RGBColor(0, 0, 0)):
     run.font.name = 'Arial'
     run._element.rPr.rFonts.set(qn('w:eastAsia'), 'Arial')
