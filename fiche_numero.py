@@ -2,6 +2,8 @@ import streamlit as st
 from datetime import datetime
 from types_controle import afficher_types_controle
 
+st.write("--- Début de fiche_numero.py ---")
+
 def gerer_numero_fiche(data):
     """
     Affiche la date du jour, gère le numéro de fiche, et demande les informations liées au contrôle.
