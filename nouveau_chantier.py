@@ -2,6 +2,8 @@ import streamlit as st
 import json
 import os
 
+st.write("--- nouv chantier.py ---")
+
 DB_FILE = "chantiers.json"
 
 def charger_chantiers():
