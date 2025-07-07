@@ -1,5 +1,7 @@
 import streamlit as st
 
+st.write("--- Début de types_ctrl.py ---")
+
 def afficher_types_controle():
     st.write("🧪 Types de contrôle à effectuer")
 
