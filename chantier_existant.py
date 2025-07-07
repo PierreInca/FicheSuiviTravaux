@@ -53,17 +53,20 @@ def utiliser_chantier_existant():
 
 
     if st.button("📝 Générer fiche test"):
-        implementer_num_fiche(numero, selection, chantiers)
-        fichier = generer_fiche_test(selection,donnes_controle)
+    implementer_num_fiche(numero, selection, chantiers)
+    fichier = generer_fiche_test(selection, donnes_controle)
 
-        if os.path.exists(fichier):
-            st.success(f"Fiche générée : {fichier}")
-            with open(fichier, "rb") as f:
-                st.download_button(
-                    label="📥 Télécharger la fiche Word",
-                    data=f,
-                    file_name=os.path.basename(fichier),
-                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                )
-        else:
-            st.error("❌ Erreur : le fichier Word n'a pas été généré.")
+    st.write("Valeur de 'fichier' retournée :", fichier)
+    st.write("Type de 'fichier' :", type(fichier))
+
+    if isinstance(fichier, str) and os.path.exists(fichier):
+        st.success(f"Fiche générée : {fichier}")
+        with open(fichier, "rb") as f:
+            st.download_button(
+                label="📥 Télécharger la fiche Word",
+                data=f,
+                file_name=os.path.basename(fichier),
+                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+            )
+    else:
+        st.error("❌ Erreur : le fichier Word n'a pas été généré ou le chemin est incorrect.")
