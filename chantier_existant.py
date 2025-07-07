@@ -57,13 +57,13 @@ def utiliser_chantier_existant():
         fichier = generer_fiche_test(selection,donnes_controle)
 
         if os.path.exists(fichier):
-        st.success(f"Fiche générée : {fichier}")
-        with open(fichier, "rb") as f:
-            st.download_button(
-                label="📥 Télécharger la fiche Word",
-                data=f,
-                file_name=os.path.basename(fichier),
-                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-            )
-    else:
-        st.error("❌ Erreur : le fichier Word n'a pas été généré.")
+            st.success(f"Fiche générée : {fichier}")
+            with open(fichier, "rb") as f:
+                st.download_button(
+                    label="📥 Télécharger la fiche Word",
+                    data=f,
+                    file_name=os.path.basename(fichier),
+                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                )
+        else:
+            st.error("❌ Erreur : le fichier Word n'a pas été généré.")
