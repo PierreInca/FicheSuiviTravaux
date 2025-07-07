@@ -81,5 +81,5 @@ def generer_fiche_test(nom_chantier,donnees):
     # Enregistrer le nouveau fichier Word
     nom_sortie = os.path.abspath(f"Fiche_TEST_{nom_chantier.replace(' ', '_')}.docx")
     doc.save(nom_sortie)
-    return nom_sortie, 
+    return nom_sortie
 
